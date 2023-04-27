@@ -12,11 +12,9 @@ const Product = ({product:{image,slug,name,price} }) => {
           height={250}
           className="product-image"/>
         <p className='product-name'> {name}</p>
-<<<<<<< HEAD
-        <p className='product-price'> ${price}</p>
-=======
+
         <p className='product-price'> ₹{price}</p>
->>>>>>> 1e3d7f1 (Updated code with new changes)
+
         </div>
       </Link>
     </div>
