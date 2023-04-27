@@ -125,12 +125,21 @@ const Cart = () => {
         {cartitems.length>=1 && (
           <div className="cart-bottom">
             <div className="total">
+<<<<<<< HEAD
               <h3> SubTotal:  ${totalprice}</h3>
               <h3>${totalprice}</h3>
             </div>
             <div className="btn-container">
               <button type="button" className="btn" onClick={handlecheckout}>
                 Pay With Stripe 
+=======
+              <h3> SubTotal:  ₹{totalprice}</h3>
+              <h3>₹{totalprice}</h3>
+            </div>
+            <div className="btn-container">
+              <button type="button" className="btn" onClick={handlecheckout}>
+                Get The Product
+>>>>>>> 1e3d7f1 (Updated code with new changes)
               </button>
             </div>
           </div>
