@@ -17,7 +17,6 @@ import axios from "axios";
 
 const ProductDetails = ({ products, product }) => {
   const { image, name, details, price } = product;
-  console.log(product);
 
   const [productDescription, setProductDescription] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -33,7 +32,7 @@ const ProductDetails = ({ products, product }) => {
 
   async function getProductDetails(productName) {
     setIsLoading(true);
-    console.log(productName);
+  
     const options = {
       method: "POST",
       url: "https://chatgpt-api7.p.rapidapi.com/ask",
@@ -49,7 +48,6 @@ const ProductDetails = ({ products, product }) => {
 
     try {
       const response = await axios.request(options);
-      console.log(response.data);
       const text = response.data.response.replace(/\n/g, "<br/> <br/>");
       setProductDescription("");
       let i = 0;
@@ -178,8 +176,6 @@ export const getStaticProps = async ({ params: { slug } }) => {
 
   const product = await client.fetch(query);
   const products = await client.fetch(productsQuery);
-
-  console.log(product);
 
   return {
     props: { products, product },
